@@ -1,11 +1,11 @@
 import json
 
 data = {
-    123456: ('John', 30),
-    234567: ('Alice', 25),
-    345678: ('Bob', 35),
-    456789: ('Emily', 28),
-    567890: ('David', 40)
+    123456: ('Alla', 30),
+    234567: ('Vasyl', 25),
+    345678: ('Iryna', 35),
+    456789: ('Anastasiia', 28),
+    567890: ('Mykolay', 40)
 }
 
 with open('data.json', 'w') as json_file:
