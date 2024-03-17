@@ -16,12 +16,17 @@ class Circle(Point):
     def circumference(self):
         return 2 * math.pi * self.radius
 
+    def __add__(self, other):
+        new_obj = super().__add__(other)
+        return Circle(new_obj.x, new_obj.y, self.radius + other.radius)
+
     def __sub__(self, other):
         if isinstance(other, Circle):
             new_x = self.x
             new_y = self.y
             new_radius = abs(self.radius - other.radius)
             return Circle(new_x, new_y, new_radius)
+
 
 r_1 = Circle()
 r_2 = Circle(1, 3, 2)
@@ -41,3 +46,6 @@ print(r_3.circumference())
 
 result = r_3 - r_2
 print("Result of subtraction:", result)
+
+r_new = r_2 + r_3
+print("Result of addition:", r_new)
